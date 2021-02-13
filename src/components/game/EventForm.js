@@ -21,6 +21,7 @@ export const EventForm = () => {
         const newEventState = Object.assign({}, currentEvent)
         newEventState[domEvent.target.name] = domEvent.target.value
         setEvent(newEventState)
+        console.log(newEventState)
         
     }
 
