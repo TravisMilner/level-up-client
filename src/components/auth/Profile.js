@@ -39,7 +39,14 @@ export const Profile = () => {
                                 <div className="registration__game">Game Title: {event.game.title}</div>
                                 <div>Event Location: {event.location}</div>
                                 <div>
-                                    Event Time: {event.event_time}
+                                    Event Time: {
+                                        new Date(event.event_time).toLocaleDateString("en-Us",{
+                                            weekday: 'long',
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric'
+                                        })
+                                    }
                                 </div>
                                 <hr />
                                 
